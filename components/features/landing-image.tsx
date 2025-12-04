@@ -23,7 +23,8 @@ function LandingImage({ className }: { className?: string }) {
                     className={cn(
                         'dark:hidden', 
                         'object-cover object-top border border-t-neutral-900 border-l-neutral-900 rounded-tl-[30px] shadow-2xl -ml-9',
-                        'mask-b-from-50% mask-r-from-50%'
+                        'mask-b-from-50% mask-r-from-50%',
+                        'object-fill'
                         
                     )}
                     style={{ transform: 'rotateY(20deg) rotateX(40deg) rotateZ(-20deg)' }}
@@ -37,7 +38,8 @@ function LandingImage({ className }: { className?: string }) {
                     className={cn(
                         'hidden dark:block', // Shows when class="dark" is present
                         'object-cover object-top border border-tl-neutral-100 rounded-tl-[30px] shadow-none -ml-9',
-                        'mask-b-from-50% mask-r-from-50%'
+                        'mask-b-from-50% mask-r-from-50%',
+                        'object-fill'
                         
                     )}
                     style={{ transform: 'rotateY(20deg) rotateX(40deg) rotateZ(-20deg)' }}
@@ -59,7 +61,8 @@ function LandingImage({ className }: { className?: string }) {
                     className={cn(
                         'dark:hidden',
                         'object-cover object-top border border-t-neutral-900 border-l-neutral-900 -z-10 rounded-tl-[30px] mt-8 ml-3 lg:mt-0 lg:ml-0 shadow-2xl ',
-                        'mask-b-from-90% mask-r-from-50%'
+                        'mask-b-from-90% mask-r-from-50%',
+                        'object-fill'
                     )}
                     style={{ transform: 'rotateY(20deg) rotateX(40deg) rotateZ(-20deg)' }}
                 />
@@ -72,7 +75,8 @@ function LandingImage({ className }: { className?: string }) {
                     className={cn(
                         'hidden dark:block',
                         'object-cover object-top border border-neutral-100 -z-10 rounded-tl-[30px] mt-8 ml-3 lg:mt-0 lg:ml-0 shadow-none',
-                        'mask-b-from-90% mask-r-from-50%'
+                        'mask-b-from-90% mask-r-from-50%',
+                        'object-fill'
                     )}
                     style={{ transform: 'rotateY(20deg) rotateX(40deg) rotateZ(-20deg)' }}
                 />

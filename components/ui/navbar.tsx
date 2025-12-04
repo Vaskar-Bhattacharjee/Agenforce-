@@ -1,11 +1,12 @@
 'use client'
-import Logo from '@/components/logo'
-import Container from './container'
+import Logo from '@/components/ui/logo'
 import Link from 'next/link'
-import { Button } from './button'
-import ModeToggle from './mode-toggle'
+
 import { useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
+import ModeToggle from './mode-toggle'
+import { Button } from './button'
+import Container from './container'
 
  const navlinks = [
         {
@@ -45,7 +46,7 @@ export default function Navbar(){
     }}
 
 
-    className='border-b border-neutral-200 dark:border-neutral-800 sticky top-0 z-50' >
+    className='border-b border-neutral-200 dark:border-neutral-800 sticky  top-0 z-50' >
         <DesktopNavbar />
         <MobileNavbar />
     </motion.div>
@@ -58,7 +59,7 @@ export default function Navbar(){
 export const MobileNavbar = () => {
     const [open, setOpen] = useState(false)
   return (
-      <div className='w-screen flex items-center justify-between  lg:hidden px-12 py-2'>
+      <div className='w-screen flex items-center justify-between   lg:hidden px-12 py-2'>
         <Logo />
         <div  onClick={() => {setOpen(!open)}} className='hover:bg-neutral-300 hover:dark:bg-neutral-800 cursor-pointer p-1 border-transparent rounded-sm'>
         <SidebarSVG className=' text-neutral-800 dark:text-neutral-200 ' />
@@ -81,7 +82,7 @@ export const MobileNavbar = () => {
             transition={{
                 duration: 0.2 
             }}
-            className='fixed  inset-0 w-full h-full bg-neutral-100/40 z-50 px-12 py-2'>
+            className='fixed inset-0 w-full h-screen bg-neutral-100/90 dark:bg-neutral-900 z-999 px-12 py-2'>
               <div className='flex justify-between  border-b border-neutral-200 dark:border-neutral-800'>
                   <Logo />
                 <button className='cursor-pointer  ml-5'

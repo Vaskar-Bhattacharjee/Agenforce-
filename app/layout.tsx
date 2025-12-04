@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { Manrope, Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
-import Navbar from "@/components/navbar";
+import Navbar from "@/components/ui/navbar";
 
 const manrope = Manrope({
   variable: "--font-manrope",

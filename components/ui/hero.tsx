@@ -1,9 +1,10 @@
-import Container from './container'
-import Heading from './header'
-import Subheading from './subheading'
-import Link from 'next/link'
-import { Button } from './button'
-import LandingImage from './landing-image'
+import Link from "next/link"
+import Container from "./container"
+import Heading from "./header"
+import Subheading from "./subheading"
+import { Button } from "./button"
+import LandingImage from "../features/landing-image"
+
 
 function Hero() {
   return (

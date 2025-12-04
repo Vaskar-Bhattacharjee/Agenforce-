@@ -1,7 +1,10 @@
-import Container from "../container"
-import Heading from "../header"
-import Subheading from "../subheading"
+import Container from "../ui/container"
+import Heading from "../ui/header"
+import Subheading from "../ui/subheading"
 import { Card, CardContent, CardCTA, CardSkeleton, CardTitle } from "./card"
+import { SkeletonOne } from "./skeletons/first"
+import { SkeletonTwo } from "./skeletons/second"
+import { SkeletonThree } from "./skeletons/third"
 
 export const Features = () => {
     return (
@@ -19,7 +22,9 @@ export const Features = () => {
             </div>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-4 my-10 md:my-20">
                 <Card className="rounded-tl-3xl rounded-bl-3xl">
-                   <CardSkeleton></CardSkeleton>
+                   <CardSkeleton>
+                    <SkeletonOne />
+                   </CardSkeleton>
                 <CardContent className="flex justify-between items-center gap-4">
                     <CardTitle>
                         Prebuilt Agents , Tuned to your worflows
@@ -33,7 +38,9 @@ export const Features = () => {
                     
                 </Card>
                 <Card>
-                     <CardSkeleton></CardSkeleton>
+                     <CardSkeleton>
+                        <SkeletonTwo />
+                     </CardSkeleton>
                     <CardContent className="flex justify-between items-center gap-4">
                     <CardTitle>
                         Prebuilt Agents , Tuned to your worflows
@@ -50,7 +57,9 @@ export const Features = () => {
                     
                     <Card className="rounded-tr-3xl rounded-br-3xl">
 
-                     <CardSkeleton></CardSkeleton>
+                     <CardSkeleton>
+                      <SkeletonThree />
+                     </CardSkeleton>
                     <CardContent className="flex justify-between items-center gap-4">
                     <CardTitle>
                         Prebuilt Agents , Tuned to your worflows
