@@ -5,7 +5,7 @@ export const Card = ({className, children}: {
     children: React.ReactNode
 }) => {
     return (
-        <div className={cn('bg-neutral-100 dark:bg-neutral-800 rounded-lg',className)}>
+        <div className={cn('bg-neutral-100 pb-10 lg:pb-0 dark:bg-neutral-800 rounded-lg',className)}>
             {children}
         </div>
     )
@@ -16,7 +16,7 @@ export const CardTitle = ({className, children}: {
     children: React.ReactNode
 }) => {
     return (
-        <h3 className={cn('text-2xl font-semibold text-neutral-800 dark:text-neutral-200',className)}>
+        <h3 className={cn('text-2xl font-semibold text-neutral-800 dark:text-neutral-200 pt-10 lg:pt-0',className)}>
             {children}
         </h3>
     )
@@ -45,7 +45,7 @@ export const CardSkeleton = ({className, children}: {
     children?: React.ReactNode
 }) => {
     return (
-        <div className={cn('min-h-40 md:min-h-80 relative overflow-hidden flex items-start justify-center perspective-distant pt-20',className)}>
+        <div className={cn('min-h-55 md:min-h-80 relative overflow-hidden flex items-start justify-center perspective-distant pt-20',className)}>
             {children}
         </div>
     )

@@ -3,35 +3,39 @@ import { IconCircleDashedCheck, IconClock, IconExclamationCircle, IconPrison, Ic
 
 export const SkeletonOne = () => {
     return (
-        <div className="perspective-distant h-full w-full overflow-hidden  absolute top-0 left-0 -ml-7 "
+        <div className="perspective-distant h-full w-full overflow-hidden group absolute top-0 left-0 -ml-2 sm:-ml-4 md:-ml-7"
         style={{
-            transform: 'rotateX(30deg) rotateY(-20deg) rotateZ(15deg) scale(1.3)'
+            transform: 'rotateX(30deg) rotateY(-20deg) rotateZ(15deg) scale(1.1) sm:scale(1.2) md:scale(1.3)'
         }} 
         >
            <SkeletonCard 
-           className="left-18 bottom-0 top-22 z-30 max-w-[85%]"
-            icon = {<IconCircleDashedCheck className="size-6" />}
+           className="left-4 sm:left-12 md:left-18 bottom-0 top-16 sm:top-20 md:top-22 z-30 max-w-[90%] sm:max-w-[87%] md:max-w-[85%] transition-all ease-in-out duration-200"
+            icon = {<IconCircleDashedCheck className="size-5 sm:size-6" />}
             title = "Campaign Planner"
-            description = "Creates clear. Ready-to-use campaign briefs using product info, audience data, and past results. "
+            description = "Creates clear. Ready-to-use campaign briefs using product info, audience data, and past results."
             Badge = {<Badge variant = "danger" text = "New" />}
-            //tags = {["Google Ads", "Saas", "B2B"]}
            /> 
 
             <SkeletonCard 
-            className="top-12 z-20 bottom-10 left-13 max-w-[80%]"
-            icon = {<IconExclamationCircle className="size-6" />}
+            className="left-4 sm:left-12 md:left-18 bottom-0 top-16 sm:top-20 md:top-22 z-20 max-w-[88%] sm:max-w-[84%] md:max-w-[80%] transition-all ease-in-out duration-200 delay-100 
+            group-hover:top-8 group-hover:bottom-8 group-hover:left-2 
+            sm:group-hover:top-10 sm:group-hover:bottom-9 sm:group-hover:left-8 
+            md:group-hover:top-12 md:group-hover:bottom-10 md:group-hover:left-13"
+            icon = {<IconExclamationCircle className="size-5 sm:size-6" />}
             title = "Issue tracker"
-            description = "Creates clear. Ready-to-use campaign briefs using product info, audience data, and past results. "
+            description = "Creates clear. Ready-to-use campaign briefs using product info, audience data, and past results."
             Badge = {<Badge variant = "success" text = "New" />}
             
            /> 
             <SkeletonCard 
-            className="top-2 max-w-[75%] bottom-15 left-8"
-            icon = {<IconPrison className="size-6 " />}
+            className="left-4 sm:left-12 md:left-18 bottom-0 top-16 sm:top-20 md:top-22 z-10 max-w-[85%] sm:max-w-[80%] md:max-w-[75%] transition-all ease-in-out duration-200 delay-200
+            group-hover:top-0 group-hover:bottom-12 group-hover:left-0
+            sm:group-hover:top-1 sm:group-hover:bottom-13 sm:group-hover:left-4
+            md:group-hover:top-2 md:group-hover:bottom-15 md:group-hover:left-8"
+            icon = {<IconPrison className="size-5 sm:size-6" />}
             title = "Risk Management"
-            description = "Creates clear. Ready-to-use campaign briefs using product info, audience data, and past results. "
-            Badge = {<Badge variant = "danger" text = "New" />}
-            //tags = {["Google Ads", "Saas", "B2B"]}
+            description = "Creates clear. Ready-to-use campaign briefs using product info, audience data, and past results."
+            Badge = {<Badge variant = "warning" text = "New" />}
            /> 
          </div>
     )
@@ -46,19 +50,21 @@ export const SkeletonCard = ({icon, title, description, Badge, className  }:{
     className?: string
 }) => {
     return (
-        <div className={cn("max-w-[80%] mx-auto  p-3 rounded-lg border border-neutral-400 bg-neutral-100 dark:bg-neutral-700 dark:border-neutral-800 absolute h-[170px] w-full",
-        'mask-radial-from-80%',
-        className)}>
-            <div className="flex items-center gap-1 lg:gap-3">
+        <div className={cn(
+            "max-w-[80%] mx-auto p-2 sm:p-3 rounded-tl-[20px]  border border-neutral-400 bg-neutral-100 dark:bg-neutral-700 dark:border-neutral-800 absolute w-full",
+            "h-[140px] sm:h-40 md:h-[170px]",
+            'mask-radial-from-90%',
+            className
+        )}>
+            <div className="flex items-center gap-1 sm:gap-2 lg:gap-3">
                 {icon}
-                <p className="text-xs md:text-sm font-semibold"> {title}</p>
+                <p className="text-xs sm:text-sm font-semibold truncate flex-1"> {title}</p>
                 {Badge}
-
             </div>
-            <p className="text-sm max-w-[80%] m-auto text-neutral-500 dark:text-neutral-400 font-medium mt-3">
+            <p className="text-xs sm:text-sm max-w-[90%] sm:max-w-[85%] md:max-w-[80%] m-auto text-neutral-500 dark:text-neutral-400 font-medium mt-2 sm:mt-3 line-clamp-2">
                 {description}
             </p>
-            <div className="flex items-center gap-2  max-w-[80%] m-auto mt-3 flex-warp">
+            <div className="flex items-center gap-1.5 sm:gap-2 max-w-[90%] sm:max-w-[85%] md:max-w-[80%] m-auto mt-2 sm:mt-3 flex-wrap">
              <Tags text = "Google Ads" />
              <Tags text = "Saas" />
              <Tags text = "B2B" />
@@ -66,29 +72,33 @@ export const SkeletonCard = ({icon, title, description, Badge, className  }:{
         </div>
     )
 }
+
 export const Tags = ({
   text
 }: {
   text: string
 }) => {
   return (
-       <div className="px-2 text-xs py-1 rounded-sm bg-neutral-200 dark:bg-neutral-700 ">
+       <div className="px-1.5 sm:px-2 text-[10px] sm:text-xs py-0.5 sm:py-1 rounded-sm bg-neutral-200 dark:bg-neutral-700 whitespace-nowrap">
             {text}
         </div>
   )
 }
+
 export const Badge = ({variant, text}: {
     variant: 'danger' | 'success' | 'warning',
     text?: string
 }) => {
   return (
-    <div className={cn("p-1 rounded-full flex items-center gap-1",
-     variant === "danger" && "bg-red-300 text-red-800",
-     variant === "success" && "bg-green-100 text-green-800",
-     variant === "warning" && "bg-yellow-100 text-yellow-800")}>
-      <IconClock className="size-4" />
-      <IconRipple className="size-4" />
-      <p className="text-xs">{text}</p>
+    <div className={cn(
+        "p-0.5 sm:p-1 rounded-full flex items-center gap-0.5 sm:gap-1",
+        variant === "danger" && "bg-red-300 text-red-800",
+        variant === "success" && "bg-green-100 text-green-800",
+        variant === "warning" && "bg-yellow-100 text-yellow-800"
+    )}>
+      <IconClock className="size-3 sm:size-4" />
+      <IconRipple className="size-3 sm:size-4" />
+      <p className="text-[10px] sm:text-xs">{text}</p>
     </div>
   )
 }

@@ -1,9 +1,9 @@
 import { cn } from "@/lib/utils"
-import { IconCircleCheckFilled, IconCircleDashedCheck, IconRipple } from "@tabler/icons-react"
+import { IconCheckbox, IconCircleCheckFilled, IconCircleDashedCheck, IconRipple, IconSquareCheckFilled } from "@tabler/icons-react"
 
 export const SkeletonTwo = () => {
   return (
-     <div className={cn("max-w-[80%] mx-auto px-3 ml-9 bg-neutral-100  dark:bg-neutral-700 dark:border-neutral-800 absolute left-6 right-2 top-0  h-[400px] w-full",
+     <div className={cn("max-w-[80%]  mx-auto px-3 ml-9 bg-neutral-100  dark:bg-neutral-700 dark:border-neutral-800 absolute left-6 right-2 top-0 h-[300px] md:h-[400px] w-full",
       '[--pattern-fg:var(--color-neutral-950)]/8 dark:[pattern-fg:var(--color-neutral-50)]/10 group', 
            )}
            style={{
@@ -23,23 +23,23 @@ export const SkeletonTwo = () => {
               translate-x-6 translate-y-5 group-hover:translate-x-0 group-hover:translate-y-0 transition-all
               ">
                 <Row 
-                icon = {<IconCircleCheckFilled className="size-6" />}
+                icon = {<IconCircleCheckFilled className="size-6 text-green-500" />}
                 title = "Campaign Planner"
                 time = "2 hours"
                 />
                  <Row 
-                icon = {<IconCircleCheckFilled className="size-6" />}
-                title = "Campaign Planner"
+                icon = {<IconSquareCheckFilled className="size-6 text-green-500" />}
+                title = "Feedback Manager"
                 time = "2 hours"
                 />
                  <Row 
-                icon = {<IconCircleCheckFilled className="size-6" />}
-                title = "Campaign Planner"
+                icon = {<IconCheckbox className="size-6 text-green-500" />}
+                title = "Issue tracker"
                 time = "2 hours"
                 />
                  <Row 
-                icon = {<IconCircleDashedCheck className="size-6" />}
-                title = "Campaign Planner"
+                icon = {<IconCircleDashedCheck className="size-6 text-green-500" />}
+                title = "Risk Management"
                 time = "2 hours"
                 />
 
@@ -65,14 +65,14 @@ export const Row = ({icon, title, time}:{
     time: string
 }) => {
   return (
-                      <div className="flex items-center justify-between px-4 py-2">
+                <div className="flex items-center justify-between px-4 py-2">
                   <div className="flex items-center gap-2">
                     {icon}
-                    <p className="text-xs md:text-sm "> {title}</p>
+                    <p className="text-[10px] md:text-xs "> {title}</p>
                   </div>
 
-                  <div className=" flex items-center gap-1 text-neutral-400">
-                    <IconRipple className="size-4" />
+                  <div className=" flex items-center gap-1 text-neutral-600 rounded-lg bg-amber-200 p-1">
+                    <IconRipple className="size-3" />
                     <p className="text-xs md:text-sm"> {time}</p>
                   </div>
                 </div>
