@@ -85,13 +85,21 @@ export const MobileNavbar = () => {
             className='fixed inset-0 w-full h-screen bg-neutral-100/90 dark:bg-neutral-900 z-999 px-12 py-2'>
               <div className='flex justify-between  border-b border-neutral-200 dark:border-neutral-800'>
                   <Logo />
-                <button className='cursor-pointer  ml-5'
-                onClick={() => setOpen(false)}
-                >
-                    <Cross className='my-2  text-black dark:text-white cursor-pointer w-6 h-6' />
-                </button>
+
+                <div className='cursor-pointer flex justify-between items-center  ml-5'>
+                    <ModeToggle
+                    className='absolute top-5 right-24'
+                    />
+                    <button 
+                    onClick={() => setOpen(false)}
+                    >
+                        <Cross className='my-2  text-black dark:text-white cursor-pointer w-6 h-6' />
+                    </button>
+                    
+                </div>  
+
               </div>
-                <div className='absolute right-[35%] left-[40%]'>
+                <div className='absolute right-[35%] w-full left-[40%]'>
                     <div className='flex flex-col justify-end w-full gap-4 p-4'>
                     {navlinks.map((item, index) => (
                             <motion.div
@@ -113,12 +121,27 @@ export const MobileNavbar = () => {
                             </motion.div>
                     ))}
                      </div>
+
+                     <div className='flex items-center gap-4 mt-10'>
+                           
+                        <Link href="/sign-in"> <Button variant='white'>Sign In</Button> </Link>
+                        <Link href="/sign-up"><Button variant='black'>Sign Up</Button></Link>
+                     </div>
+
+
+                     
                 </div>
+
+               
               
             </motion.div>
             
         )}
         </AnimatePresence>
+
+
+         
+        
         
 
     </div>

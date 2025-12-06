@@ -3,23 +3,22 @@ import { IconCheckbox, IconCircleCheckFilled, IconCircleDashedCheck, IconRipple,
 
 export const SkeletonTwo = () => {
   return (
-     <div className={cn("max-w-[80%]  mx-auto px-3 ml-9 bg-neutral-100  dark:bg-neutral-700 dark:border-neutral-800 absolute left-6 right-2 top-0 h-[300px] md:h-[400px] w-full",
-      '[--pattern-fg:var(--color-neutral-950)]/8 dark:[pattern-fg:var(--color-neutral-50)]/10 group', 
-           )}
+     <div className={cn("max-w-[80%]  mx-auto px-3 ml-9 dark:bg-transparent absolute left-6 right-2 top-0 h-[300px] md:h-[400px] w-full",
+                         '[--pattern-fg:var(--color-neutral-950)]/5  dark:[--pattern-fg:var(--color-neutral-50)]/10 group'           )}
            style={{
             transform: 'rotateX(30deg) rotateY(25deg) rotateZ(-27deg) '
         }}
            >
 
-            <div className="flex items-center gap-1 lg:gap-3">
+            <div className="flex items-center gap-1 -mt-2 pb-2  lg:gap-3">
                 <IconCircleDashedCheck className="size-6" />
                 <p className="text-xs md:text-sm font-semibold"> Campaign Planner</p>
                 
 
             </div>
-            <div className=" min-h-60 relative flex-1 mt-4 border border-neutral-400 rounded-lg shadow-2xl group-hover:shadow-none ">
+            <div className=" min-h-60 relative flex-1  border border-neutral-400 rounded-lg shadow-2xl group-hover:shadow-none ">
               <Pattern />
-              <div className="absolute rounded-xl inset-0  bg-white h-full w-full
+              <div className="absolute rounded-[9px] inset-0 border border-neutral-300 bg-white dark:bg-neutral-100  h-full w-full
               translate-x-6 translate-y-5 group-hover:translate-x-0 group-hover:translate-y-0 transition-all
               ">
                 <Row 
@@ -54,7 +53,7 @@ export const SkeletonTwo = () => {
 
 export const Pattern = () => {
   return (
-                  <div className=" absolute inset-0 bg-[repeating-linear-gradient(315deg,var(--pattern-fg)_0,var(--pattern-fg)_1px,transparent_0,transparent_50%)] bg-size-[10px_10px] bg-fixed"></div>
+     <div className=" absolute inset-0 bg-[repeating-linear-gradient(315deg,var(--pattern-fg)_0,var(--pattern-fg)_1px,transparent_0,transparent_50%)] bg-size-[10px_10px] bg-fixed"></div>
 
   )
 }
@@ -68,7 +67,7 @@ export const Row = ({icon, title, time}:{
                 <div className="flex items-center justify-between px-4 py-2">
                   <div className="flex items-center gap-2">
                     {icon}
-                    <p className="text-[10px] md:text-xs "> {title}</p>
+                    <p className="text-[10px] md:text-xs dark:text-neutral-700"> {title}</p>
                   </div>
 
                   <div className=" flex items-center gap-1 text-neutral-600 rounded-lg bg-amber-200 p-1">

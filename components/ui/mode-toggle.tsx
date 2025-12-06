@@ -1,9 +1,10 @@
 'use client';
+import { cn } from '@/lib/utils';
 import { Moon, Sun } from 'lucide-react';
 import {useTheme} from 'next-themes';
 import { useEffect, useState } from 'react';
 
-function ModeToggle() {
+function ModeToggle({className}: {className?: string}) {
 const { theme, setTheme } = useTheme();
 
   const [systemTheme, setSystemTheme] = useState<"light" | "dark">("light");
@@ -39,8 +40,8 @@ const { theme, setTheme } = useTheme();
   return (
     <button
     onClick={SWITCH_THEME}
-    className="flex items-center justify-center size-6 p-2  border border-neutral-300
-     dark:border-neutral-700 rounded-md cursor-pointer relative">
+    className={cn("flex items-center justify-center size-6 p-2",  
+                  "border border-neutral-300dark:border-neutral-700 rounded-md cursor-pointer relative", className )}>
         <Sun className=' absolute size-3.5   dark:scale-100 scale-0 dark:rotate-45 rotate-0' />
         <Moon className='absolute size-3.5  dark:scale-0 scale-100 dark:rotate-0 rotate-45'/>
     </button>

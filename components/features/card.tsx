@@ -32,7 +32,7 @@ export const CardContent = ({className, children}: {
     )
 }
 
-export const CardCTA = ({className, children, ...rest}: React.ComponentProps<'button'>) => {
+export const CardCTA = ({className, children}: React.ComponentProps<'button'>) => {
     return (
         <button className={cn('size-5 md:size-10 shrink-0 rounded-full border border-neutral-800 dark:border-neutral-200 flex items-center justify-center active:scale-95 transition duration-200 font-semibold text-neutral-800 dark:text-neutral-200 cursor-pointer  ',className)}>
             {children}

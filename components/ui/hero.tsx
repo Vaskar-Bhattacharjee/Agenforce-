@@ -21,7 +21,15 @@ function Hero() {
         <Link href="/learn"><Button variant="black" className="shadow-lg">Learn More</Button></Link>
        </div>
        <div className="pointer-events-none">
-          <LandingImage />
+          <LandingImage
+            className="pointer-events-none"
+            BackImageAlt="Acertinity"
+            BackImageDark="/Aceternity-dark.png"
+            BackImageLight="/Aceternity.png"
+            FrontImageAlt="ShadCN"
+            FrontImageDark="/ShadCN-dark.png"
+            FrontImageLight="/ShadCN.png"
+          />
         </div>
 
    </Container>

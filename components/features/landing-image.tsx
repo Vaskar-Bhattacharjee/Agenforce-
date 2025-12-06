@@ -4,7 +4,25 @@ import { cn } from '@/libs/utils'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 
-function LandingImage({ className }: { className?: string }) {
+function LandingImage({ 
+                    className,
+                    BackImageLight,
+                    BackImageAlt,
+                    BackImageDark,
+                    FrontImageLight,
+                    FrontImageAlt,
+                    FrontImageDark,
+
+                 }: { 
+                    className?: string
+                    BackImageLight: string
+                    BackImageAlt: string
+                    BackImageDark: string
+                    FrontImageLight: string
+                    FrontImageAlt: string
+                    FrontImageDark: string
+                
+                }) {
     
     return (
         <div className={cn('min-h-[360px] lg:min-h-[520px] w-[90%] mx-auto relative mt-20 md:mt-15 perspective-1000', className)}>
@@ -17,8 +35,8 @@ function LandingImage({ className }: { className?: string }) {
             >
                 {/* 1. Light Mode Back Image (Hidden in Dark Mode) */}
                 <Image 
-                    src='/Acertinity.png' 
-                    alt='ACERTINITY Light' 
+                    src={BackImageLight}
+                    alt={`${BackImageAlt} Light`}
                     fill
                     className={cn(
                         'dark:hidden', 
@@ -32,12 +50,12 @@ function LandingImage({ className }: { className?: string }) {
 
                 {/* 2. Dark Mode Back Image (Visible ONLY in Dark Mode) */}
                 <Image 
-                    src='/Acertinity-dark.png' 
-                    alt='ACERTINITY Dark' 
+                    src={BackImageDark}
+                    alt={`${BackImageAlt} Dark`}
                     fill
                     className={cn(
                         'hidden dark:block', // Shows when class="dark" is present
-                        'object-cover object-top border border-tl-neutral-100 rounded-tl-[30px] shadow-none -ml-9',
+                        'object-cover object-top border dark:border-neutral-400 border-neutral-900 rounded-tl-[30px] shadow-none -ml-9',
                         'mask-b-from-50% mask-r-from-50%',
                         'object-fill'
                         
@@ -55,8 +73,8 @@ function LandingImage({ className }: { className?: string }) {
             >
                 {/* 3. Light Mode Front Image */}
                 <Image 
-                    src='/ShadCN.png' 
-                    alt='SHADCN Light' 
+                    src={FrontImageLight} 
+                    alt={`${FrontImageAlt} Light`}
                     fill
                     className={cn(
                         'dark:hidden',
@@ -69,8 +87,8 @@ function LandingImage({ className }: { className?: string }) {
 
                 {/* 4. Dark Mode Front Image */}
                 <Image 
-                    src='/ShadCN-dark.png' 
-                    alt='SHADCN Dark' 
+                    src={FrontImageDark}
+                    alt={`${FrontImageAlt} Dark`}
                     fill
                     className={cn(
                         'hidden dark:block',
