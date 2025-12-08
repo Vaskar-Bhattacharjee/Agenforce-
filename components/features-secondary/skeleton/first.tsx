@@ -1,21 +1,16 @@
+import { CardSkeleton } from "@/components/features/card"
 import { cn } from "@/lib/utils"
-import Container from "./container"
 
-export const FeaturesSecondary = () => {
+export const FirstFeature = ({className}:{className? : string}) => {
   return (
-    <section className='pt-10 md:pt-20 lg:pt-32 relative overflow-hidden'>
-        <Container>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3
-            border-y border-neutral-200 dark:border-neutral-800 divide-x 
-            divide-neutral-200 dark:divide-neutral-800 ">
-                <div className="p-4"
+       <div className={cn("pt-4 pr-12", className)}
                 >
-                    <h2 className="text-lg font-bold text-neutral-800 "> Agent Studio</h2>
-                    <p className="text-neutral-600 mt-2">
+                    <h2 className="text-lg font-bold text-neutral-800 dark:text-neutral-200 "> Agent Studio</h2>
+                    <p className="text-neutral-600 dark:text-neutral-400 mt-2">
                         Design, launch, and customize AI agents for marketing, sales, support, and ops built around your workflows. 
                     </p>
                     <CardSkeleton>
-                          <div className="bg-gray-200 rounded-lg mx-auto min-h-70 min-w-[85%]">
+                          <div className="bg-gray-200 dark:bg-neutral-700 rounded-lg mx-auto min-h-70 min-w-[85%]">
                             <CardBox
                                 iconBgColor = "bg-green-500"
                                 icon = {<ConnectData className="size-7 text-white" />}
@@ -57,33 +52,10 @@ export const FeaturesSecondary = () => {
                     
                     </CardSkeleton>
                 </div>
-
-                 <div className="p-4"
-                >
-                    <h2 className="text-lg font-bold text-neutral-800 "> Multi-agent orchestration</h2>
-                    <p className="text-neutral-600 mt-2">
-                        Coordinate multiple agents across workflows using memory, interrupts, and conditional logic. 
-                    </p>
-                    <CardSkeleton>
-                        aljd
-                    </CardSkeleton>
-                </div>
-            </div>
-        </Container>
-    </section>
   )
 }
 
-export const CardSkeleton = ({className, children}: {
-    className?: string,
-    children?: React.ReactNode
-}) => {
-    return (
-        <div className={cn('min-h-55 md:min-h-80 relative overflow-hidden flex flex-col items-start justify-center perspective-distant pt-10',className)}>
-            {children}
-        </div>
-    )
-}
+
 
 export const Token = ({ icon, text }: { 
   icon: React.ReactNode,
@@ -92,7 +64,7 @@ export const Token = ({ icon, text }: {
 
 }) => {
   return(
-    <div className="bg-neutral-50 flex justify-center items-center border border-neutral-400 hover:border-neutral-900 rounded-lg  px-2 py-[2px] gap-1 cursor-pointer group">
+    <div className="bg-neutral-50 dark:bg-neutral-800 flex justify-center items-center border border-neutral-400 hover:border-neutral-900 rounded-lg  px-2 py-0.5 gap-1 cursor-pointer group">
       <div className="size-5 flex justify-center items-center group-hover:-translate-x-1 transition duration-200">
         {icon}
       </div>
@@ -124,7 +96,7 @@ export const CardBox = ({
         
         <div className="mt-6">
           <h2 className="font-semibold">{title}</h2>
-          <p className="text-xs text-neutral-500 pb-4">{description}</p>
+          <p className="text-xs text-neutral-500 pb-4 w-[80%]">{description}</p>
 
           {children && (
             <div className="flex gap-2 w-full h-full  flex-wrap">
@@ -154,7 +126,7 @@ export const Card = ({className, children}: {
     children: React.ReactNode
 }) => {
     return (
-        <div className={cn('bg-neutral-100 pb-4 m-3 dark:bg-neutral-800 rounded-lg flex  gap-4 justify-between items-start',className)}>
+        <div className={cn('bg-neutral-100 pb-4 m-3 dark:bg-neutral-800 rounded-lg flex  gap-4 items-start',className)}>
             {children}
         </div>
     )
@@ -251,7 +223,7 @@ export const Sales = ({ className }: { className?: string }) => {
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      strokeWidth="2"
+      strokeWidth="1"
       strokeLinecap="round"
       strokeLinejoin="round"
     >
@@ -275,7 +247,7 @@ export const Hub = ({ className }: { className?: string }) => {
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      strokeWidth="2"
+      strokeWidth="1.5"
       strokeLinecap="round"
       strokeLinejoin="round"
     >
@@ -297,7 +269,7 @@ export const Sheets = ({ className }: { className?: string }) => {
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      strokeWidth="2"
+      strokeWidth="1"
       strokeLinecap="round"
       strokeLinejoin="round"
     >
