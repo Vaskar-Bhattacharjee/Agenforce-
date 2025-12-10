@@ -6,17 +6,17 @@ import { Sheets } from "./first"
 
 export const SecondFeatures = ({className}: {className?: string}) => {
   return (
-      <div className={cn("p-4", className)}
+      <div className={cn("p-4 max-w-120", className)}
 
                 >
                     <h2 className="text-lg font-bold text-neutral-800 "> Multi-agent orchestration</h2>
                     <p className="text-neutral-600 mt-2">
                         Coordinate multiple agents across workflows using memory, interrupts, and conditional logic. 
                     </p>
-                    <CardSkeleton className="h-full min-w-full"
+                    <CardSkeleton className=" h-full min-w-full "
                     > 
                     <div
-                    className="h-full w-full"
+                    className="h-100 w-100 py-10 mask-l-from-90% lg:mask-l-from-60% mask-r-from-100% lg:mask-r-from-90% mask-t-from-90% mask-b-from-90% "
                     style={{
                       transform: "rotateY(20deg) rotateX(30deg) rotateZ(-20deg)"
                     }}
@@ -40,12 +40,12 @@ export const SecondFeatures = ({className}: {className?: string}) => {
                                       className="size-9"
                                       icon={<Meta className="size-8 text-blue-600" />} 
                                       translatePosition="150px"
-                                      orbitDuration="17s"
+                                      orbitDuration="20s"
                             />
                             <Revolving  
                                       className="size-0"
                                       translatePosition="130px"
-                                      orbitDuration="20s"
+                                      orbitDuration="13s"
                             >
                               <p className="text-xs text-neutral-600">Animate Project</p>
                             </Revolving>
@@ -172,7 +172,7 @@ export const Revolving = ({className,
                              
                            }: {
                             className?: string,
-                            icon?: React.ReactNode
+                            icon?: React.ReactNode,
                             translatePosition?: string,
                             orbitDuration?: string,
                             children?: React.ReactNode

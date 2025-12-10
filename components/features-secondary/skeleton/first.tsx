@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils"
 
 export const FirstFeature = ({className}:{className? : string}) => {
   return (
-       <div className={cn("pt-4 pr-12", className)}
+       <div className={cn("pt-4 pr-3 max-w-150 mx-auto", className)}
                 >
                     <h2 className="text-lg font-bold text-neutral-800 dark:text-neutral-200 "> Agent Studio</h2>
                     <p className="text-neutral-600 dark:text-neutral-400 mt-2">
