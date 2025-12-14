@@ -1,17 +1,23 @@
 import { CardSkeleton } from "@/components/features/card"
 import { cn } from "@/lib/utils"
+import { motion } from "framer-motion"
+
+
 
 export const FirstFeature = ({className}:{className? : string}) => {
   return (
-       <div className={cn("pt-4 pr-3 max-w-150 mx-auto", className)}
+       <div className={cn("pt-4 pr-3 w-full  md:max-w-150 mx-auto", className)}
                 >
                     <h2 className="text-lg font-bold text-neutral-800 dark:text-neutral-200 "> Agent Studio</h2>
                     <p className="text-neutral-600 dark:text-neutral-400 mt-2">
                         Design, launch, and customize AI agents for marketing, sales, support, and ops built around your workflows. 
                     </p>
                     <CardSkeleton>
-                          <div className="bg-gray-200 dark:bg-neutral-700 rounded-lg mx-auto min-h-70 min-w-[85%]">
+                          <motion.div
+                    
+                          className="bg-gray-200 dark:bg-neutral-700 rounded-lg mx-auto min-h-70  md:min-w-[85%]">
                             <CardBox
+                                index={0}
                                 iconBgColor = "bg-green-500"
                                 icon = {<ConnectData className="size-7 text-white" />}
                                 title = "Content Data"
@@ -31,6 +37,7 @@ export const FirstFeature = ({className}:{className? : string}) => {
                                     />
                                 </CardBox>
                                 <CardBox 
+                                index={1}
                                 iconBgColor = "bg-blue-500"
                                 icon = {<Setting className="size-7  text-white" />}
                                 title = "Define processing logic"
@@ -38,6 +45,7 @@ export const FirstFeature = ({className}:{className? : string}) => {
                                 />
 
                                 <CardBox 
+                                index={2}
                                 iconBgColor = "bg-red-500"
                                 icon = {<Error className="size-7 b text-white" />}
                                 title = "Manage errors"
@@ -45,7 +53,7 @@ export const FirstFeature = ({className}:{className? : string}) => {
                                 />
                           
                           
-                    </div>  
+                    </motion.div>  
                    
 
 
@@ -74,13 +82,15 @@ export const Token = ({ icon, text }: {
 }
 
 export const CardBox = ({
-  
+  index,
   iconBgColor = "bg-green-500",
   icon,
   title,
   description,
-  children
+  children,
+
 }: {
+  index: number
   className?: string
   iconBgColor?: string
   icon: React.ReactNode
@@ -89,7 +99,7 @@ export const CardBox = ({
   children?: React.ReactNode
 }) => {
   return (
-      <Card>
+      <Card index={index}>
         <div className={cn("flex items-center justify-center rounded-full w-8 h-8 px-1 ml-4 mt-6", iconBgColor)}>
           {icon}
         </div>
@@ -121,14 +131,19 @@ export const SkeletonOne = ({
     </div>
   )
 }
-export const Card = ({className, children}: {
+export const Card = ({className, children, index}: {
     className?: string,
-    children: React.ReactNode
+    children: React.ReactNode,
+    index: number
 }) => {
     return (
-        <div className={cn('bg-neutral-100 pb-4 m-3 dark:bg-neutral-800 rounded-lg flex  gap-4 items-start',className)}>
+        <motion.div
+        initial={{ opacity: 0, y: 5 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ delay:  index * 0.2 }}
+        className={cn('bg-neutral-100 pb-4 m-3 dark:bg-neutral-800 rounded-lg flex  gap-4 items-start',className)}>
             {children}
-        </div>
+        </motion.div>
     )
 }
 

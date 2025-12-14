@@ -9,7 +9,7 @@ export const FeaturesSecondary = () => {
         <Container className=" flex flex-col justify-center items-center gap-4 ">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2
             border-y border-neutral-200 dark:border-neutral-800 divide-x-0 lg:divide-x 
-            divide-neutral-200 dark:divide-neutral-800 pb-30 pt-4 md:pb-5 overflow-hidden  ">
+            divide-neutral-200 dark:divide-neutral-800 pb-30 pt-4 md:pb-2 overflow-hidden  ">
              
                 <FirstFeature  />
                 <SecondFeatures />

@@ -6,17 +6,17 @@ import { Sheets } from "./first"
 
 export const SecondFeatures = ({className}: {className?: string}) => {
   return (
-      <div className={cn("p-4 max-w-120", className)}
+      <div className={cn("p-4 flex flex-col items-start lg:ml-5 max-w-120", className)}
 
                 >
                     <h2 className="text-lg font-bold text-neutral-800 "> Multi-agent orchestration</h2>
                     <p className="text-neutral-600 mt-2">
                         Coordinate multiple agents across workflows using memory, interrupts, and conditional logic. 
                     </p>
-                    <CardSkeleton className=" h-full min-w-full "
+                    <CardSkeleton className="h-110 min-w-130"
                     > 
                     <div
-                    className="h-100 w-100 py-10 mask-l-from-90% lg:mask-l-from-60% mask-r-from-100% lg:mask-r-from-90% mask-t-from-90% mask-b-from-90% "
+                    className="w-full h-full flex items-center justify-center py-15  overflow-hidden mask-l-from-90% mask-r-from-90% mask-t-from-90% mask-b-from-90% "
                     style={{
                       transform: "rotateY(20deg) rotateX(30deg) rotateZ(-20deg)"
                     }}
@@ -40,7 +40,7 @@ export const SecondFeatures = ({className}: {className?: string}) => {
                                       className="size-9"
                                       icon={<Meta className="size-8 text-blue-600" />} 
                                       translatePosition="150px"
-                                      orbitDuration="20s"
+                                      orbitDuration="17s"
                             />
                             <Revolving  
                                       className="size-0"
@@ -119,7 +119,7 @@ export const CardInsideSolar = ({className}: {className?: string}) => {
   return(
               <div className={cn("absolute rounded-[9px] inset-0 shadow-xl ring-1 ring-neutral-300 bg-white dark:bg-neutral-800 z-40 py-2 animate-orbit  h-fit w-full", className)}
                style={{
-                                  '--translate-position': '190px',
+                                  '--translate-position': '150px',
                                   '--orbit-duration': '25s'
                                 } as React.CSSProperties}
               >
@@ -167,7 +167,7 @@ export const Row = ({icon, title}:{
 export const Revolving = ({className,
                            icon,
                            translatePosition = '120px',  // default value
-                            orbitDuration = '15s',
+                            orbitDuration = '13s',
                             children
                              
                            }: {

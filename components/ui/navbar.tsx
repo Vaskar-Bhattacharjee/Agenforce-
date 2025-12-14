@@ -46,7 +46,7 @@ export default function Navbar(){
     }}
 
 
-    className='border-b border-neutral-200 dark:border-neutral-800 sticky  top-0 z-50' >
+    className='border-b border-neutral-200 dark:border-neutral-800 fixed w-full left-0 right-0 top-0  z-50' >
         <DesktopNavbar />
         <MobileNavbar />
     </motion.div>
@@ -59,10 +59,10 @@ export default function Navbar(){
 export const MobileNavbar = () => {
     const [open, setOpen] = useState(false)
   return (
-      <div className='w-screen flex items-center justify-between   lg:hidden px-12 py-2'>
+      <div className='w-full flex items-center justify-between   lg:hidden px-12 py-2'>
         <Logo />
         <div  onClick={() => {setOpen(!open)}} className='hover:bg-neutral-300 hover:dark:bg-neutral-800 cursor-pointer p-1 border-transparent rounded-sm'>
-        <SidebarSVG className=' text-neutral-800 dark:text-neutral-200 ' />
+        <SidebarSVG className=' text-neutral-800 dark:text-neutral-200 mr-5' />
         </div>
         <AnimatePresence>
         {open && (
@@ -82,25 +82,26 @@ export const MobileNavbar = () => {
             transition={{
                 duration: 0.2 
             }}
-            className='fixed inset-0 w-full h-screen bg-neutral-100/90 dark:bg-neutral-900 z-999 px-12 py-2'>
+            className='fixed inset-0 w-full h-160 bg-neutral-100/90 dark:bg-neutral-900 z-999 px-12 py-2'>
               <div className='flex justify-between  border-b border-neutral-200 dark:border-neutral-800'>
                   <Logo />
 
-                <div className='cursor-pointer flex justify-between items-center  ml-5'>
+                <div className='cursor-pointer flex justify-between items-center mr-5'>
                     <ModeToggle
                     className='absolute top-5 right-24'
                     />
                     <button 
                     onClick={() => setOpen(false)}
+                    
                     >
-                        <Cross className='my-2  text-black dark:text-white cursor-pointer w-6 h-6' />
+                        <Cross className='my-2   text-black dark:text-white cursor-pointer w-6 h-6' />
                     </button>
                     
                 </div>  
 
               </div>
                 <div className='absolute right-[35%] w-full left-[40%]'>
-                    <div className='flex flex-col justify-end w-full gap-4 p-4'>
+                    <div className='flex flex-col justify-end w-full gap-4 p-4 mt-10'>
                     {navlinks.map((item, index) => (
                             <motion.div
                             initial={{

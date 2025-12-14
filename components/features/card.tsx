@@ -5,7 +5,7 @@ export const Card = ({className, children}: {
     children: React.ReactNode
 }) => {
     return (
-        <div className={cn('bg-neutral-100 pb-10 lg:pb-0 dark:bg-neutral-800 rounded-lg',className)}>
+        <div className={cn('bg-neutral-100 pb-10 lg:pb-0 dark:bg-neutral-800 rounded-lg w-full',className)}>
             {children}
         </div>
     )
@@ -45,7 +45,7 @@ export const CardSkeleton = ({className, children}: {
     children?: React.ReactNode
 }) => {
     return (
-        <div className={cn('min-h-55 md:min-h-80 relative overflow-hidden flex items-start justify-center perspective-distant pt-20 max-w-100 mx-auto',className)}>
+        <div className={cn('min-h-50 md:min-h-80 relative overflow-hidden flex items-start justify-center perspective-distant   md:max-w-100 mx-auto',className)}>
             {children}
         </div>
     )
