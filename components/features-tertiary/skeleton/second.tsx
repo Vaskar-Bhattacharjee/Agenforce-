@@ -3,21 +3,15 @@ import { cn } from "@/lib/utils";
 import { IconPointerFilled } from "@tabler/icons-react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { useMemo } from "react";
+import { Header, Paragraph } from "./comp";
 
 
 export const Second = ({ className }: { className?: string }) => {
 
   return (
     <div className={cn("p-4", className)}>
-      <h2 className="text-lg font-bold text-neutral-800 dark:text-neutral-200 ">
-        {" "}
-        Multi-agent orchestration
-      </h2>
-      <p className="text-neutral-600 dark:text-neutral-400 w-120 mt-2 mb-8 md:mb-0">
-        Coordinate multiple agents across workflows using memory, interrupts,
-        and conditional logic.
-      </p>
+      <Header>Multi-agent orchestration</Header>
+      <Paragraph>Coordinate multiple agents across workflows using memory, interrupts, and conditional logic.</Paragraph>
       <CardSkeleton className="h-[calc(100%-100px)] md:h-full w-fit lg:min-w-full flex flex-col gap-y-2.5 justify-center items-center mask-r-from-80% mask-b-from-80% mask-t-from-70% mask-l-from-80% md:-mt-10 relative">
         <Admin />
         <ContentHead />

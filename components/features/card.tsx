@@ -45,7 +45,7 @@ export const CardSkeleton = ({className, children}: {
     children?: React.ReactNode
 }) => {
     return (
-        <div className={cn('min-h-50 md:min-h-80 relative overflow-hidden flex items-start justify-center perspective-distant   md:max-w-100 mx-auto',className)}>
+        <div className={cn('min-h-50 md:h-120 relative overflow-hidden flex flex-col items-start justify-center perspective-distant   md:max-w-100 mx-auto',className)}>
             {children}
         </div>
     )

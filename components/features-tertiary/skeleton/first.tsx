@@ -1,6 +1,7 @@
 import { cn } from "@/lib/utils"
 import { IconBackground, IconClock, IconClockDollar, IconClockHour5, IconMailAi, IconSeo, IconSocial, IconUserBitcoin, IconUserBolt } from "@tabler/icons-react"
 import { motion } from "framer-motion"
+import { Card, Header, Paragraph } from "./comp"
 
 const divElement = [
   {
@@ -71,11 +72,8 @@ export const First = ({className}:{className? : string}) => {
   return (
        <div className={cn("pt-4 overflow-hidden w-full md:w-120 h-full ", className)}
                 >
-                    <h2 className="text-lg font-bold text-neutral-800 dark:text-neutral-200 "> Audit trails</h2>
-                    <p className="text-neutral-600 dark:text-neutral-400 max-w-[90%]  mt-2">
-                        Tracks every red agent action with full input/output visibility and timestamps. 
-
-                    </p>
+                    <Header> Audit trails</Header>  
+                    <Paragraph> Tracks every agent action with full visibility and timestamps</Paragraph>   
                     
                           <div className="bg-gray-200 dark:bg-neutral-700 relative rounded-tl-3xl mx-auto  min-h-fit w-120 md:w-120 flex flex-col mt-5 gap-4 mask-b-from-40%">
                             <Card>
@@ -162,17 +160,6 @@ export const Badge = ({className, children, icon, text, badge_text_color }: {
 
 
 
-export const Card = ({className, children}: {
-    className?: string,
-    children?: React.ReactNode
-}) => {
-    return (
-        <div className={cn('bg-neutral-100 my-2  dark:bg-neutral-800 rounded-tl-2xl flex flex-1 h-full w-full justify-center gap-4 items-start',
-                            'mask-b-from-90% mask-r-from-90% ml-2',
-                            className)}>
-            {children}
-        </div>
-    )
-}
+
 
 
