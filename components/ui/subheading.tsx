@@ -10,15 +10,13 @@ interface HeaderProps {
 }
 
 export default function Subheading({
-  as = "h2",
-  className,
+   className,
   children,
   ...props
 }: HeaderProps) {
-  const Tag = as;
 
   return (
-    <Tag
+    <h2
       {...props}
       className={cn(
         "text-base md:text-lg py-8 text-neutral-400 dark:text-neutral-600 font-inter max-w-xl tracking-tight",
@@ -27,6 +25,6 @@ export default function Subheading({
       )}
     >
       {children}
-    </Tag>
+    </h2>
   );
 }

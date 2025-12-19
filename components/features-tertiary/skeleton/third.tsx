@@ -7,15 +7,17 @@ import {
   IconClipboardText,
   IconDropletCheck,
   IconFeatherFilled,
+  IconSettingsCheck,
 } from "@tabler/icons-react";
 import { useState } from "react";
 
 const items = [
   {
-    icon: <IconClipboardText className="size-4 text-teal-500" />,
-    icon2: <IconClipboardText className="size-6 text-teal-500" />,
+    icon: <IconSettingsCheck className="size-4 text-teal-500" />,
+    icon2: <IconSettingsCheck className="size-6 text-teal-500" />,
 
     bgColor: "bg-teal-100",
+    cardBg: "bg-teal-50",
     title: "Brand and Style",
     subtitle: "Tone Guidelines",
     description:
@@ -25,6 +27,7 @@ const items = [
     icon: <IconClipboardText className="size-4 text-blue-500" />,
     icon2: <IconClipboardText className="size-6 text-blue-500" />,
     bgColor: "bg-blue-100",
+    cardBg: "bg-blue-50",
     title: "Compliance & policy",
     subtitle: "Tone Guidelines",
     description:
@@ -34,6 +37,7 @@ const items = [
     icon: <IconFeatherFilled className="size-4 text-purple-500" />,
     icon2: <IconFeatherFilled className="size-6 text-purple-500" />,
     bgColor: "bg-purple-100",
+    cardBg: "bg-purple-50",
     title: "Content Safety Filters",
     subtitle: "Tone Guidelines",
     description:
@@ -43,6 +47,7 @@ const items = [
     icon: <IconDropletCheck className="size-4 text-green-500" />,
     icon2: <IconDropletCheck className="size-6 text-green-500" />,
     bgColor: "bg-green-100",
+    cardBg: "bg-green-50",
     title: "Approval triggers",
     subtitle: "Tone Guidelines",
     description:
@@ -88,10 +93,12 @@ export const Third = ({ className }: { className?: string }) => {
             </button>
           ))}
         </div>
-        <motion.div className="bg-gray-200 dark:bg-neutral-700 rounded-lg mx-auto min-h-70  md:min-w-[85%]">
-          <Card index={0} className="p-4">
+        <motion.div
+        key={selected.title}
+        className="bg-gray-200  dark:bg-neutral-700 rounded-xl mx-auto min-h-70  md:min-w-[85%] p-3">
+          <Card index={0} className={`p-4 ${selected.cardBg}`}>
             <motion.div
-              key={selected.title}
+              
               initial={{ opacity: 0, backdropFilter: "blur(15px)" }}
               animate={{ opacity: 1, backdropFilter: "blur(0px)" }}
               transition={{ duration: 0.8 }}
@@ -107,24 +114,24 @@ export const Third = ({ className }: { className?: string }) => {
               className="mt-6"
             >
               <motion.h2
-              key={selected.title}
-              initial={{ opacity: 0, backdropFilter: "blur(15px)" }}
-              animate={{ opacity: 1, backdropFilter: "blur(0px)" }}
-              transition={{ duration: 0.8 }}
+              
+              initial={{ opacity: 0, filter: "blur(15px)" }}
+              animate={{ opacity: 1, filter: "blur(0px)" }}
+              transition={{ delay: 0.2 }}
               className="font-semibold">{selected.title}</motion.h2>
               <div className="flex flex-col mt-2 gap-1 mb-2">
                 <h3 className="font-semibold text-neutral-500 text-[14px]">
                   {selected.subtitle}
                 </h3>
                 <motion.div
-                  key={selected.title}
+                  
                   initial={{ opacity: 0, backdropFilter: "blur(15px)" }}
                   animate={{ opacity: 1, backdropFilter: "blur(0px)" }}
                   transition={{ duration: 0.8 }}
                 
                 className="border border-dashed px-2 py-1 border-neutral-300 dark:border-neutral-600 rounded-md w-[100%]">
                   <motion.p
-                  key={selected.title}
+                  
                   initial={{ opacity: 0, backdropFilter: "blur(15px)" }}
                   animate={{ opacity: 1, backdropFilter: "blur(0px)" }}
                   transition={{ duration: 0.8 }}
@@ -134,7 +141,7 @@ export const Third = ({ className }: { className?: string }) => {
                   </motion.p>
                 </motion.div>
               </div>
-              <Token />
+              <Token key={selected.title} />
             </motion.div>
           </Card>
         </motion.div>
@@ -143,10 +150,19 @@ export const Third = ({ className }: { className?: string }) => {
   );
 };
 
-export const Token = () => {
+export const Token = (
+  { key }: { key?: string }
+) => {
   return (
-    <div className="flex gap-1 w-fit mt-4">
-      <div className="bg-neutral-50 dark:bg-neutral-800 flex justify-center items-center border border-neutral-400 hover:border-neutral-900 rounded-lg  px-2 py-0.5 gap-1 cursor-pointer group">
+    <motion.div
+    
+    className="flex gap-1 w-fit mt-4">
+      <motion.div
+      key={key}
+      initial={{ opacity: 0, y: 5 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.1 }}
+      className="bg-neutral-50 dark:bg-neutral-800 flex justify-center items-center border border-neutral-400 hover:border-neutral-900 rounded-lg  px-2 py-0.5 gap-1 cursor-pointer group">
         <div className="size-5 flex justify-center items-center group-hover:-translate-x-1 transition duration-200">
           <Sales className="size-5 text-orange-500" />
         </div>
@@ -154,9 +170,15 @@ export const Token = () => {
           {" "}
           Salesforce
         </p>
-      </div>
+      </motion.div>
 
-      <div className="bg-neutral-50 dark:bg-neutral-800 flex justify-center items-center border border-neutral-400 hover:border-neutral-900 rounded-lg  px-2 py-0.5 gap-1 cursor-pointer group">
+      <motion.div
+      key={key}
+      initial={{ opacity: 0, y: 5 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.1 }}
+      
+      className="bg-neutral-50 dark:bg-neutral-800 flex justify-center items-center border border-neutral-400 hover:border-neutral-900 rounded-lg  px-2 py-0.5 gap-1 cursor-pointer group">
         <div className="size-5 flex justify-center items-center group-hover:-translate-x-1 transition duration-200">
           <Sheets className="size-5 text-green-500" />
         </div>
@@ -164,9 +186,17 @@ export const Token = () => {
           {" "}
           Sheets
         </p>
-      </div>
+      </motion.div>
 
-      <div className="bg-neutral-50 dark:bg-neutral-800 flex justify-center items-center border border-neutral-400 hover:border-neutral-900 rounded-lg  px-2 py-0.5 gap-1 cursor-pointer group">
+      <motion.div
+      key={key}
+      initial={{ opacity: 0, y: 5 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.2
+      
+       }}
+      
+      className="bg-neutral-50 dark:bg-neutral-800 flex justify-center items-center border border-neutral-400 hover:border-neutral-900 rounded-lg  px-2 py-0.5 gap-1 cursor-pointer group">
         <div className="size-5 flex justify-center items-center group-hover:-translate-x-1 transition duration-200">
           <Hub className="size-5 text-green-500" />
         </div>
@@ -174,8 +204,8 @@ export const Token = () => {
           {" "}
           Hubspot
         </p>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };
 
@@ -212,7 +242,7 @@ export const Card = ({
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ delay: index * 0.2 }}
       className={cn(
-        "bg-neutral-100 pb-4 m-3 dark:bg-neutral-800 rounded-lg flex  gap-4 items-start",
+        "bg-neutral-100 h-full  dark:bg-neutral-800 rounded-lg flex border border-neutral-300   gap-4 items-start",
         className
       )}
     >
