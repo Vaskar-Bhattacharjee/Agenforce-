@@ -1,4 +1,5 @@
 import Container from "../ui/container"
+import { GradientBadge } from "../ui/gradient"
 import { First } from "./skeleton/first"
 import { Second } from "./skeleton/second"
 import { Third } from "./skeleton/third"
@@ -10,10 +11,14 @@ export const FeaturesTertiary = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 w-screen md:w-250 mx-auto
              border-y-0 md:border-y divide-y  border-neutral-200 dark:border-neutral-800 divide-x-0 lg:divide-x 
             divide-neutral-200 dark:divide-neutral-800 pt-4 md:pb-5 overflow-hidden">
-             
+                
                 <First  />
                 <Second  />
                 <Third />
+                <GradientBadge className="mb-10 md:mb-0">
+            Trusted by 1.5M+ Developers Worldwide
+
+            </GradientBadge>
             </div>
    
         </Container>

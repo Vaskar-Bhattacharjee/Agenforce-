@@ -21,7 +21,7 @@ export default function Heading({
     <h1
       {...props}
       className={cn(
-        "font-display tracking-tight text-4xl md:text-4xl lg:text-5xl font-bold",
+        "font-display tracking-tight text-2xl md:text-4xl lg:text-5xl font-bold",
         className
       )}
     >

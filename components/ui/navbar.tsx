@@ -8,6 +8,7 @@ import ModeToggle from './mode-toggle'
 import { Button } from './button'
 import Container from './container'
 
+
  const navlinks = [
         {
             title: "Features",
@@ -44,11 +45,12 @@ export default function Navbar(){
     transition={{
         duration: 0.2 
     }}
-
-
-    className='border-b border-neutral-200 dark:border-neutral-800 fixed w-full left-0 right-0 top-0  z-50' >
-        <DesktopNavbar />
-        <MobileNavbar />
+    className='md:border-b md:border-neutral-200 md:dark:border-neutral-800 fixed inset-x-0 top-0 z-50 flex items-center justify-center' >
+        
+        <Container className='w-screen'>
+            <DesktopNavbar />
+            <MobileNavbar />
+        </Container>
     </motion.div>
         
 
@@ -59,8 +61,8 @@ export default function Navbar(){
 export const MobileNavbar = () => {
     const [open, setOpen] = useState(false)
   return (
-      <div className='w-full flex items-center justify-between   lg:hidden px-12 py-2'>
-        <Logo />
+      <div className='absolute inset-x-0 flex items-center justify-between   lg:hidden px-0 md:px-12 py-2'>
+        <Logo className=''/>
         <div  onClick={() => {setOpen(!open)}} className='hover:bg-neutral-300 hover:dark:bg-neutral-800 cursor-pointer p-1 border-transparent rounded-sm'>
         <SidebarSVG className=' text-neutral-800 dark:text-neutral-200 mr-5' />
         </div>
@@ -82,7 +84,7 @@ export const MobileNavbar = () => {
             transition={{
                 duration: 0.2 
             }}
-            className='fixed inset-0 w-full h-160 bg-neutral-100/90 dark:bg-neutral-900 z-999 px-12 py-2'>
+            className='fixed inset-0 w-full h-160 bg-neutral-100/90 dark:bg-neutral-900 z-999 px-2 py-2'>
               <div className='flex justify-between  border-b border-neutral-200 dark:border-neutral-800'>
                   <Logo />
 

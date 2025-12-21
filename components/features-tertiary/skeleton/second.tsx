@@ -3,14 +3,15 @@ import { cn } from "@/lib/utils";
 import { IconPointerFilled } from "@tabler/icons-react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { Header, Paragraph } from "./comp";
+import { Paragraph } from "./comp";
+import Subheading from "@/components/ui/subheading";
 
 
 export const Second = ({ className }: { className?: string }) => {
 
   return (
     <div className={cn("p-4", className)}>
-      <Header>Multi-agent orchestration</Header>
+      <Subheading className="py-0">Multi-agent orchestration</Subheading>
       <Paragraph>Coordinate multiple agents across workflows using memory, interrupts, and conditional logic.</Paragraph>
       <CardSkeleton className="h-[calc(100%-100px)] md:h-full w-fit lg:min-w-full flex flex-col gap-y-2.5 justify-center items-center mask-r-from-80% mask-b-from-80% mask-t-from-70% mask-l-from-80% md:-mt-10 relative">
         <Admin />
@@ -160,7 +161,7 @@ export const InsideCircle = ({ className }: { className?: string }) => {
 
 export const Admin = () => {
   return (
-    <div className="absolute flex flex-col items-center gap-1 top-14 md:top-25 -left-2 md:left-9 z-20 ">
+    <div className="absolute flex flex-col items-center gap-1 top-10 md:top-25 -left-2 md:left-9 z-20 ">
       <div className="flex items-center justify-end w-28 h-4">
         <IconPointerFilled className="rotate-y-180 -rotate-z-20 text-neutral-500 dark:text-gray-300" />
       </div>
@@ -173,7 +174,7 @@ export const Admin = () => {
 
 export const ContentHead = () => {
   return (
-    <div className="absolute flex flex-col items-center gap-1  md:top-73 -right-4  z-20">
+    <div className="absolute flex flex-col items-center gap-1 top-50  md:top-73 -right-15 md:-right-4  z-20">
       <div className="flex items-center justify-start w-40 h-4">
         <IconPointerFilled className=" -rotate-z-20 text-neutral-500 dark:text-gray-300" />
       </div>

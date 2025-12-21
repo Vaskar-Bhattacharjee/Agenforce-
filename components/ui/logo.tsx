@@ -57,7 +57,7 @@ const LogoIcon = ({className, ...props }: React.SVGProps<SVGSVGElement> ) => {
 export	const LogoText = ({ className }: { className?: string}) => {
 		return (
 			<Link href="/" className={cn(
-			"font-bold font-display text-xl text-neutral-800 dark:text-neutral-300 ",
+			"font-bold font-display text-lg md:text-xl text-neutral-800 dark:text-neutral-300 ",
 			className
 		)}>Agenforce</Link>
 		)}

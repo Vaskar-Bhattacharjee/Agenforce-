@@ -8,7 +8,7 @@ import LandingImage from "../features/landing-image"
 
 function Hero() {
   return (
-   <Container className='mb-8'>
+   <Container className='mb-8 pt-10 md:pt-20 lg:pt-15'>
     <Heading >
         Agents that do the work. <br />
          Approvals that keep you safe. 

@@ -35,8 +35,8 @@ const FAQ_DATA = [
 
 export const FAQs = () => {
   return (
-    <section className="pt-10 md:pt-16 lg:pt-32 pl-20">
-      <Container className="flex flex-col items-start text-center gap-4  ">
+    <section className="pt-10 md:pt-16 lg:pt-32 px-4 md:px-0 ">
+      <Container className="flex flex-col items-start text-center gap-4">
         <FAQIcon />
 
         <Heading className="mb-4 lg:mb-10">Frequently Asked Questions</Heading>
@@ -50,24 +50,24 @@ export const FAQData = () => {
   const [isOpenIndex, setIsOpenIndex] = useState<number | null>(null);
 
   return (
-    <>
+    <Container className="w-full">
       {FAQ_DATA.map((faq, index) => (
         <div
           key={index}
           onClick={() => setIsOpenIndex(isOpenIndex === index ? null : index)}
-          className=" flex flex-col gap-3 px-6 py-6 mb-6 border-b border-neutral-300 w-[calc(100%-12rem)] select-none  cursor-pointer"
+          className="flex flex-col gap-3 px-0 md:px-2 py-6 mb-6 border-b border-neutral-300 dark:border-neutral-700 w-full md:w-full select-none cursor-pointer"
         >
           <motion.div
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: isOpenIndex === index ? "auto" : 0, opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="flex justify-between items-center gap-2 w-full"
+            className="flex justify-between items-center gap-2 w-full "
           >
-            <h1 className="text-left text-neutral-800 dark:text-neutral-200 text-xl lg:text-2xl font-semibold select-none">
+            <h1 className="font-display text-left text-neutral-800 dark:text-neutral-200 text-base md:text-lg lg:text-2xl font-bold select-none">
               {faq.question}
             </h1>
-            <div className="w-6 h-6 cursor-pointer  rounded-full flex justify-center items-center">
+            <div className="w-6 h-6 shrink-0 cursor-pointer rounded-full flex justify-center items-center">
               <IconMinus
                 className={cn(
                   "text-black dark:text-white transition-transform duration-200 ease-in-out",
@@ -86,7 +86,7 @@ export const FAQData = () => {
               />
             </div>
           </motion.div>
-         <motion.div
+          <motion.div
             initial={false}
             animate={{
               height: isOpenIndex === index ? "auto" : 0,
@@ -97,53 +97,28 @@ export const FAQData = () => {
               opacity: 0
             }}
             transition={{ duration: 0.2 }}
-         className="flex flex-col justify-between items-start   overflow-hidden">
-            <motion.p
-            key={index}
-            initial={{ opacity: 0 }}
-            animate={{
-              opacity: 1
-            }}
-            transition={{ delay: 0.2 }}
-            className={cn(
-              "text-neutral-600 dark:text-neutral-400 text-left hidden select-none w-200",
-              isOpenIndex === index && "block"
-            )}
+            className="flex flex-col justify-between items-start overflow-hidden"
           >
-            {faq.answer}
-          </motion.p>
-         </motion.div>
-          
+            <motion.p
+              key={index}
+              initial={{ opacity: 0 }}
+              animate={{
+                opacity: 1
+              }}
+              transition={{ delay: 0.2 }}
+              className={cn(
+                "font-display text-neutral-600 dark:text-neutral-400 text-left text-sm md:text-base hidden select-none w-full md:w-200",
+                isOpenIndex === index && "block"
+              )}
+            >
+              {faq.answer}
+            </motion.p>
+          </motion.div>
         </div>
       ))}
-    </>
+    </Container>
   );
 };
 
-export const FAQIcon = () => {
-  return (
-    <svg
-      width="72"
-      height="72"
-      viewBox="0 0 72 72"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M18.2031 46C24.2783 46 29.2031 41.0751 29.2031 35C29.2031 28.9249 24.2783 24 18.2031 24C12.128 24 7.20312 28.9249 7.20312 35C7.20312 41.0751 12.128 46 18.2031 46Z"
-        fill="currentColor"
-      />
-
-      <path
-        d="M18.2058 50C9.97778 50 2.72178 55.248 0.149781 63.064C-0.150219 63.98 0.00578082 64.98 0.569781 65.76C1.13378 66.54 2.03778 67 2.99778 67H33.4058C34.3658 67 35.2738 66.54 35.8338 65.76C36.3938 64.98 36.5578 63.98 36.2538 63.064C33.6858 55.248 26.4338 50 18.1978 50H18.2058Z"
-        fill="currentColor"
-      />
-
-      <path
-        opacity={0.2}
-        d="M63 0H41C36.04 0 32 4.036 32 9V23C32 27.624 35.508 31.444 40 31.944V41C40 42.236 40.756 43.348 41.916 43.796C42.268 43.932 42.636 44 43 44C43.824 44 44.632 43.66 45.212 43.028L55.32 32H63C67.96 32 72 27.964 72 23V9C72 4.036 67.96 0 63 0Z"
-        fill="currentColor"
-      />
-    </svg>
-  );
-};
+// Placeholder for FAQIcon - add your actual icon component
+const FAQIcon = () => <div className="w-full" />;
