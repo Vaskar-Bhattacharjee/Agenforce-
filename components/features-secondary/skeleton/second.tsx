@@ -9,19 +9,19 @@ export const SecondFeatures = ({className}: {className?: string}) => {
       <div className={cn("p-4 flex flex-col items-start lg:ml-5 max-w-120", className)}
 
                 >
-                    <h2 className="text-lg font-bold text-neutral-800 "> Multi-agent orchestration</h2>
+                    <h2 className="text-lg font-bold text-neutral-700 dark:text-neutral-300 "> Multi-agent orchestration</h2>
                     <p className="text-neutral-600 mt-2">
                         Coordinate multiple agents across workflows using memory, interrupts, and conditional logic. 
                     </p>
                     <CardSkeleton className="h-110 min-w-130"
                     > 
                     <div
-                    className="w-full h-full flex items-center justify-center py-15  overflow-hidden mask-l-from-90% mask-r-from-90% mask-t-from-90% mask-b-from-90% "
+                    className="w-full h-full -ml-15 flex items-center justify-center py-8 md:py-15  overflow-hidden mask-l-from-90% mask-r-from-90% mask-t-from-90% mask-b-from-90% "
                     style={{
                       transform: "rotateY(20deg) rotateX(30deg) rotateZ(-20deg)"
                     }}
                     >
-                      <Circle className="size-40 bg-neutral-200/40 border shadow-md shadow-emerald-50 z-12 ">
+                      <Circle className="size-30 md:size-40 bg-neutral-200/40 border shadow-md shadow-emerald-50 z-12 ">
                             <InsideCircle className="stroke-neutral-600 size-12 " />
                         
                             <Revolving 
@@ -66,7 +66,7 @@ export const SecondFeatures = ({className}: {className?: string}) => {
 
 export const Circle = ({children, className}:{children?: React.ReactNode, className?: string}) => {
   return (
-        <div className={cn("s rounded-full m-auto absolute inset-0 ", className)}>
+        <div className={cn("rounded-full m-auto absolute inset-0 ", className)}>
             {children}
         </div>
 

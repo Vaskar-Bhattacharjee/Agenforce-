@@ -5,7 +5,7 @@ export const Left = () => {
   return (
     <div className="mb-10 flex flex-col gap-4 w-full h-full justify-center  items-start">
       <Subheading className="py-0" >Trusted by 500+ enterprise companies</Subheading>
-      <Heading className="w-fulllg:w-[calc(100%+10rem)]">Affordable pricing. <br /> Grow with confidence.</Heading>
+      <Heading className="w-fulllg:w-[calc(100%+10rem)]">Affordable pricing. <br /> Easy scaling.</Heading>
       <Subheading className="py-0 max-w-[480px]">
         Start small to explore automation, add agents as you scale, and unlock
         enterprise-grade guardrails, orchestration, and reporting when you are

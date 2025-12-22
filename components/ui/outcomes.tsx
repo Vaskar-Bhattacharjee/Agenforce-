@@ -10,7 +10,7 @@ import LandingImage from "../features/landing-image"
 
 function Outcomes() {
   return (
-   <Container className='mb-8 mt-10'>
+   <Container className='mb-8 py-10 md:pt-20 lg:pt-32'>
     <Heading as = "h2">
         Governed AI<br />
         Trusted Outcomes 

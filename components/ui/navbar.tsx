@@ -47,7 +47,7 @@ export default function Navbar(){
     }}
     className='md:border-b md:border-neutral-200 md:dark:border-neutral-800 fixed inset-x-0 top-0 z-50 flex items-center justify-center' >
         
-        <Container className='w-screen'>
+        <Container className='w-screen md:px-0'>
             <DesktopNavbar />
             <MobileNavbar />
         </Container>
@@ -169,7 +169,7 @@ export const MobileNavbar = () => {
 export const DesktopNavbar = () => {
 
     return (
-            <Container className=' py-4 px-2 hidden lg:flex lg:justify-between lg:items-center '>
+            <Container className=' py-4  hidden lg:flex lg:justify-between lg:items-center '>
             <Logo />
             <div className='flex items-center gap-4'>
                 {

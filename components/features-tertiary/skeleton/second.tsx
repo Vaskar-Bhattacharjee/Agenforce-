@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 import { IconPointerFilled } from "@tabler/icons-react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { Paragraph } from "./comp";
+import { Header, Paragraph } from "./comp";
 import Subheading from "@/components/ui/subheading";
 
 
@@ -11,7 +11,7 @@ export const Second = ({ className }: { className?: string }) => {
 
   return (
     <div className={cn("p-4", className)}>
-      <Subheading className="py-0">Multi-agent orchestration</Subheading>
+      <Header className="py-0 ">Multi-agent orchestration</Header>
       <Paragraph>Coordinate multiple agents across workflows using memory, interrupts, and conditional logic.</Paragraph>
       <CardSkeleton className="h-[calc(100%-100px)] md:h-full w-fit lg:min-w-full flex flex-col gap-y-2.5 justify-center items-center mask-r-from-80% mask-b-from-80% mask-t-from-70% mask-l-from-80% md:-mt-10 relative">
         <Admin />

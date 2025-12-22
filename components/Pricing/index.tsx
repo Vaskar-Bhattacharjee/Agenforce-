@@ -6,7 +6,7 @@ import { Right } from "./Layout/right"
 export const Pricing = () => {
   return (
     <section className='pt-10 md:pt-20 lg:pt-32 relative overflow-hidden'>
-        <Container className=" flex justify-center items-center gap-10 md:gap-28 w-full h-full rounded-lg p-10 md:p-16 lg:p-20 flex-col md:flex-row">
+        <Container className=" flex justify-between items-center gap-10 md:gap-28 w-full h-full rounded-lg py-10 md:py-0 lg:py-0 flex-col md:flex-row">
            
             <Left />
             <Right />
