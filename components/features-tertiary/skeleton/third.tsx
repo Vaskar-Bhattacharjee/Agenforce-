@@ -16,8 +16,8 @@ const items = [
     icon: <IconSettingsCheck className="size-4 text-teal-800" />,
     icon2: <IconSettingsCheck className="size-6 text-teal-800" />,
 
-    bgColor: "bg-teal-500",
-    cardBg: "bg-teal-200",
+    bgColor: "bg-teal-200",
+    cardBg: "bg-teal-500/10",
     title: "Brand and Style",
     subtitle: "Tone Guidelines",
     description:
@@ -55,7 +55,7 @@ const items = [
   },
 ];
 
-export const Third = ({ className }: { className?: string }) => {
+export const Forth = ({ className }: { className?: string }) => {
   const [selected, setSelected] = useState(items[0]);
 
   return (
@@ -95,7 +95,7 @@ export const Third = ({ className }: { className?: string }) => {
         </div>
         <motion.div
         key={selected.title}
-        className="bg-gray-200  dark:bg-neutral-700 rounded-xl md:mx-auto min-h-70 w-90 ml-0 md:-ml-3  md:min-w-[calc(100%+0rem)] p-2 md:p-3">
+        className="bg-gray-200  dark:bg-neutral-700 rounded-xl md:mx-auto min-h-70 w-90 ml-0 md:-ml-3  md:min-w-100 p-2 md:p-3">
           <Card index={0} className={`p-4 ${selected.cardBg}`}>
             <motion.div
               

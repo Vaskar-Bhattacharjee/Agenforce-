@@ -5,11 +5,11 @@ export const SkeletonOne = () => {
     return (
         <div className="perspective-distant h-full w-full overflow-hidden group absolute top-0 left-0 -ml-2 sm:-ml-4 md:-ml-7"
         style={{
-            transform: 'rotateX(30deg) rotateY(-20deg) rotateZ(15deg) scale(1.1) sm:scale(1.2) md:scale(1.3)'
+            transform: 'rotateX(20deg) rotateY(-15deg) rotateZ(15deg) scale(1.2) '
         }} 
         >
            <SkeletonCard 
-           className="left-4 sm:left-12 md:left-18 bottom-0 top-16 sm:top-20 md:top-22 z-30 max-w-[90%] sm:max-w-[87%] md:max-w-[85%] transition-all ease-in-out duration-200"
+           className="left-19 top-30 z-30 max-w-[90%] sm:max-w-[87%] md:max-w-[85%] transition-all ease-in-out duration-200"
             icon = {<IconCircleDashedCheck className="size-5 sm:size-6" />}
             title = "Campaign Planner"
             description = "Creates clear. Ready-to-use campaign briefs using product info, audience data, and past results."
@@ -17,10 +17,7 @@ export const SkeletonOne = () => {
            /> 
 
             <SkeletonCard 
-            className="left-4 sm:left-12 md:left-18 bottom-0 top-16 sm:top-20 md:top-22 z-20 max-w-[88%] sm:max-w-[84%] md:max-w-[80%] transition-all ease-in-out duration-200 delay-100 
-            group-hover:top-8 group-hover:bottom-8 group-hover:left-2 
-            sm:group-hover:top-10 sm:group-hover:bottom-9 sm:group-hover:left-8 
-            md:group-hover:top-12 md:group-hover:bottom-10 md:group-hover:left-13"
+            className="left-14 top-20 z-20 max-w-[88%] sm:max-w-[84%] md:max-w-[80%] transition-all ease-in-out duration-200 delay-100" 
             icon = {<IconExclamationCircle className="size-5 sm:size-6" />}
             title = "Issue tracker"
             description = "Creates clear. Ready-to-use campaign briefs using product info, audience data, and past results."
@@ -28,10 +25,7 @@ export const SkeletonOne = () => {
             
            /> 
             <SkeletonCard 
-            className="left-4 sm:left-12 md:left-18 bottom-0 top-16 sm:top-20 md:top-22 z-10 max-w-[85%] sm:max-w-[80%] md:max-w-[75%] transition-all ease-in-out duration-200 delay-200
-            group-hover:top-0 group-hover:bottom-12 group-hover:left-0
-            sm:group-hover:top-1 sm:group-hover:bottom-13 sm:group-hover:left-4
-            md:group-hover:top-2 md:group-hover:bottom-15 md:group-hover:left-8"
+            className="left-10 top-11 z-10 max-w-[85%] sm:max-w-[80%] md:max-w-[75%] transition-all ease-in-out duration-200 delay-200"
             icon = {<IconPrison className="size-5 sm:size-6" />}
             title = "Risk Management"
             description = "Creates clear. Ready-to-use campaign briefs using product info, audience data, and past results."
@@ -51,7 +45,7 @@ export const SkeletonCard = ({icon, title, description, Badge, className  }:{
 }) => {
     return (
         <div className={cn(
-            "max-w-[80%] mx-auto p-2 sm:p-3 rounded-tl-[20px]  border border-neutral-400 bg-neutral-100 dark:bg-neutral-700 dark:border-neutral-800 absolute w-full",
+            "max-w-[80%] mx-auto p-2 sm:p-3 rounded-tl-[20px] rounded-tr-[20px] rounded-bl-[20px]     border border-neutral-400 bg-neutral-100 dark:bg-neutral-700 dark:border-neutral-300 absolute w-full",
             "h-[140px] sm:h-40 md:h-[170px]",
             'mask-radial-from-90%',
             className

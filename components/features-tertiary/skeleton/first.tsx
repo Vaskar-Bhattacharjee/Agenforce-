@@ -73,10 +73,10 @@ export const First = ({className}:{className? : string}) => {
        <div className={cn("pt-4 overflow-hidden w-full md:w-120 h-full ", className)}
                 >
                     <Header> Audit trails</Header>  
-                    <Paragraph> Tracks every agent action with full visibility and timestamps</Paragraph>   
+                    <Paragraph className="mb-10" > Tracks every agent action with full visibility and timestamps</Paragraph>   
                     
-                          <div className="bg-gray-200 dark:bg-neutral-700 relative rounded-tl-3xl mx-auto  min-h-fit w-120 md:w-120 flex flex-col mt-5 gap-4 mask-b-from-40%">
-                            <Card>
+                          <div className="bg-gray-200 dark:bg-neutral-700 relative rounded-tl-3xl mx-auto   w-120 md:w-120 flex flex-col mt-10 gap-4 mask-b-from-40%">
+                            <Card >
                                 <div className="flex gap-2 p-3 absolute inset-x-0 border-b border-neutral-300 dark:border-neutral-600 items-center">
                                   <div><IconSocial className="size-5" /></div>
                                   <p className="text-sm text-neutral-600 dark:text-neutral-400 font-bold"> Recent activity</p>

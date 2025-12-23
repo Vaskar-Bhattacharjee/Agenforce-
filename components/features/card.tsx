@@ -5,11 +5,12 @@ export const Card = ({className, children}: {
     children: React.ReactNode
 }) => {
     return (
-        <div className={cn('bg-neutral-100 pb-10 lg:pb-0 dark:bg-neutral-800 rounded-lg w-full',className)}>
+        <div className={cn('bg-neutral-100 pb-10 lg:pb-0 dark:bg-neutral-900 rounded-lg w-full',className)}>
             {children}
         </div>
     )
 }
+
 
 export const CardTitle = ({className, children}: {
     className?: string,
@@ -26,7 +27,7 @@ export const CardContent = ({className, children}: {
     children: React.ReactNode
 }) => {
     return (
-        <div className={cn('text-2xl font-semibold text-neutral-800 dark:text-neutral-200 px-4 pb-6',className)}>
+        <div className={cn('text-2xl font-semibold text-neutral-800 dark:text-neutral-200 px-6 pb-6',className)}>
             {children}
         </div>
     )
@@ -45,7 +46,7 @@ export const CardSkeleton = ({className, children}: {
     children?: React.ReactNode
 }) => {
     return (
-        <div className={cn('h-100 md:h-100 relative overflow-hidden flex flex-col items-center justify-center perspective-distant w-full   md:max-w-100 mx-auto',className)}>
+        <div className={cn('h-90 md:h-100 relative overflow-hidden flex flex-col items-center justify-center perspective-distant w-full   md:max-w-100 mx-auto',className)}>
             {children}
         </div>
     )

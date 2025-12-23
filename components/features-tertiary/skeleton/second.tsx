@@ -4,7 +4,6 @@ import { IconPointerFilled } from "@tabler/icons-react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { Header, Paragraph } from "./comp";
-import Subheading from "@/components/ui/subheading";
 
 
 export const Second = ({ className }: { className?: string }) => {

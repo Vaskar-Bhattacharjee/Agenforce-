@@ -25,7 +25,7 @@ export const Features = () => {
                    <CardSkeleton>
                     <SkeletonOne />
                    </CardSkeleton>
-                <CardContent className="flex justify-between items-center gap-4">
+                <CardContent className="flex  justify-between items-center gap-4">
                     <CardTitle>
                         Prebuilt Agents , Tuned to your worflows
                     </CardTitle>
@@ -41,9 +41,9 @@ export const Features = () => {
                      <CardSkeleton>
                         <SkeletonTwo />
                      </CardSkeleton>
-                    <CardContent className="flex justify-between items-center gap-4">
+                    <CardContent className="flex justify-between items-center gap-2">
                     <CardTitle>
-                        Prebuilt Agents , Tuned to your worflows
+                        Automate Handoffs, Reduce Ops Friction
                     </CardTitle>
                      <CardCTA>
                         <Plus  />
@@ -62,7 +62,7 @@ export const Features = () => {
                      </CardSkeleton>
                     <CardContent className="flex justify-between items-center gap-4">
                     <CardTitle>
-                        Prebuilt Agents , Tuned to your worflows
+                        Approvals, Guardrails, and Full Auditability
                     </CardTitle>
                      <CardCTA>
                         <Plus  />

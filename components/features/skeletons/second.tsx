@@ -19,7 +19,7 @@ export const SkeletonTwo = () => {
             <div className=" min-h-60 relative flex-1  border border-neutral-400 rounded-lg shadow-2xl group-hover:shadow-none ">
               <Pattern />
               <div className="absolute rounded-[9px] inset-0 border border-neutral-300 bg-white dark:bg-neutral-100  h-full w-full
-              translate-x-6 translate-y-5 group-hover:translate-x-0 group-hover:translate-y-0 transition-all
+              translate-x-6 translate-y-5 group-hover:translate-x-0 group-hover:translate-y-0 transition-all delay-50 duration-300
               ">
                 <Row 
                 icon = {<IconCircleCheckFilled className="size-6 text-green-500" />}

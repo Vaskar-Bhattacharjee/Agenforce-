@@ -1,13 +1,13 @@
 import Container from "../ui/container"
-import { GradientBadge } from "../ui/gradient"
 import { First } from "./skeleton/first"
+import { Third } from "./skeleton/forth"
 import { Second } from "./skeleton/second"
-import { Third } from "./skeleton/third"
+import { Forth } from "./skeleton/third"
 
 export const FeaturesTertiary = () => {
   return (
     <section className='pt-0 relative overflow-hidden'>
-        <Container className=" flex flex-col justify-center items-center gap-4 pt-0">
+        <Container className="flex flex-col justify-center items-center gap-4 pt-0">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 w-screen md:w-250 mx-auto
              border-y-0 md:border-y divide-y  border-neutral-200 dark:border-neutral-800 divide-x-0 lg:divide-x 
             divide-neutral-200 dark:divide-neutral-800 pt-4 md:pb-5 overflow-hidden">
@@ -15,10 +15,11 @@ export const FeaturesTertiary = () => {
                 <First  />
                 <Second  />
                 <Third />
-                <GradientBadge className="mb-10 md:mb-0">
+                <Forth />
+                {/* <GradientBadge className="mb-10 md:mb-0">
             Trusted by 1.5M+ Developers Worldwide
 
-            </GradientBadge>
+            </GradientBadge> */}
             </div>
    
         </Container>
