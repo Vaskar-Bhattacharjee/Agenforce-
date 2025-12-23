@@ -52,7 +52,7 @@ export const PriceDiv = ({
         <Heading>
           ${dollar}
           <span className="text-sm md:text-xl text-neutral-500 dark:text-neutral-600">
-            /mon
+            /mo
           </span>{" "}
         </Heading>
         <Subheading className="py-3 text-neutral-500 dark:text-neutral-400 w-70  text-sm">

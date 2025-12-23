@@ -1,8 +1,8 @@
 import Container from "../ui/container"
 import { First } from "./skeleton/first"
-import { Third } from "./skeleton/forth"
+import { Third } from "./skeleton/third"
 import { Second } from "./skeleton/second"
-import { Forth } from "./skeleton/third"
+import { Forth } from "./skeleton/forth"
 
 export const FeaturesTertiary = () => {
   return (

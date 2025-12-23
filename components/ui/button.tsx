@@ -17,7 +17,7 @@ export const Button = ({
     <button
       {...props}
       className={cn(
-        'px-2 md:px-7 py-3 rounded-sm cursor-pointer transition-all text-xs md:text-base ',
+        'px-2 md:px-4 py-2 rounded-sm cursor-pointer transition-all text-xs md:text-sm ',
 
         // Default variant styles
         variant === 'white' && 'ring-1 ring-neutral-300 bg-white hover:shadow-2xl hover:bg-neutral-200  dark:bg-neutral-200 text-black  hover:dark:shadow-brand  ',
