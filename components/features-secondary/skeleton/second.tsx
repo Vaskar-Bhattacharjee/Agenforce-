@@ -21,8 +21,8 @@ export const SecondFeatures = ({className}: {className?: string}) => {
                       transform: "rotateY(20deg) rotateX(30deg) rotateZ(-20deg)"
                     }}
                     >
-                      <Circle className="size-30 md:size-40 bg-neutral-200/40 border shadow-md shadow-emerald-50 z-12 ">
-                            <InsideCircle className="stroke-neutral-600 size-12 " />
+                      <Circle className="size-30 md:size-40 bg-neutral-200/10 border shadow-md border-emerald-50 z-12 ">
+                            <InsideCircle className="stroke-neutral-600 dark:stroke-neutral-300 size-12 " />
                         
                             <Revolving 
                                       className="size-9"
@@ -52,11 +52,11 @@ export const SecondFeatures = ({className}: {className?: string}) => {
                             <CardInsideSolar />
                          </Circle>
                           
-                         <Circle  className="size-60 bg-neutral-100/60 border border-neutral-200 shadow-sm z-10" >
+                         <Circle  className="size-60 bg-neutral-400/10 border border-neutral-200 shadow-sm z-10" />
                          
-                         </Circle>
-                         <Circle  className="size-80 bg-neutral-200/40 border border-neutral-100 shadow-sm  z-9" />
-                         <Circle  className="size-100 bg-gray-300/10 border border-neutral-300 shadow-sm  z-8" />
+                         
+                         <Circle  className="size-80 bg-neutral-200/20 border border-neutral-100 shadow-sm  z-9" />
+                         <Circle  className="size-100 bg-neutral-300/10 border border-neutral-300 shadow-sm  z-8" />
                     </div>
                          
                     </CardSkeleton>

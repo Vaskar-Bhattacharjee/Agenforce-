@@ -5,7 +5,7 @@ export const Card = ({className, children}: {
     children: React.ReactNode
 }) => {
     return (
-        <div className={cn('bg-neutral-100 pb-10 lg:pb-0 dark:bg-neutral-900 rounded-lg w-full',className)}>
+        <div className={cn('bg-neutral-100 pb-10 lg:pb-0 dark:bg-neutral-800 rounded-lg w-full',className)}>
             {children}
         </div>
     )

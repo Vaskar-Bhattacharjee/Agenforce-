@@ -140,7 +140,7 @@ export const Card = ({className, children, index}: {
         <motion.div
         initial={{ opacity: 0, y: 5 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ delay:  index * 0.2 }}
+        transition={{ delay:  index * 0.7 }}
         className={cn('bg-neutral-100 pb-4 m-3 dark:bg-neutral-800 rounded-lg flex  gap-4 items-start',className)}>
             {children}
         </motion.div>
